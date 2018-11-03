@@ -1,0 +1,23 @@
+page-home {
+    height:100%;
+    ion-grid{
+        height:100%;
+        ion-row{
+            height:100%;
+            ion-col{
+                text-align: center;
+                button{
+                    height:100px!important;
+                    width: 50%;
+                    border-radius: 100px!important;
+                }
+                .recording-ok{
+                    background: red;
+                }
+                .recording-ko{
+                    // background: blue:
+                }
+            }
+        }
+    }
+}

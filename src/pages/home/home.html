@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center >
+        <button ion-button float-center [ngClass]="(recording)? 'recording-ok' : 'recording-ko'"(click)="record()">Click and speak</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let audi of audioList; index as i;">
+            <p>{{audi.filename}}</p>
+            <button ion-button clear item-end large (click)="playAudio(audi.filename, i)"><ion-icon name="play"></ion-icon></button>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
